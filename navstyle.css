@@ -1,0 +1,138 @@
+
+.mheader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 0px 10vh;
+
+}   
+
+.imgmenu{
+    width: 60px;
+    height: 80px;
+    
+}
+
+.logo{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+}
+
+.navigation ul{
+    list-style: none;
+}
+.mheader .navigation ul li{
+    float: left;
+    position: relative;
+}
+.mheader .navigation ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    padding: 15px;
+    display: block;
+    transition: all .2s ease; /*Transicion de 2 segundos*/
+    
+}
+
+
+.mheader .navigation ul li a:hover{
+    background-color: azure;
+}
+
+.mheader .navigation ul li ul{
+
+   
+    padding: 0;
+    position: absolute;
+    left:0;
+    width: 300px;
+    
+    background-color: #4CAF50;
+    display:none;
+    
+  
+}
+.mheader .navigation ul li ul li a{
+   
+    font-size: 12px;
+    text-transform: capitalize;
+    text-align: left;
+    
+}
+.mheader .navigation ul li ul li{
+
+    
+width: 100%;
+
+}
+.mheader .navigation ul li:hover > ul{
+    display: initial;
+}
+
+#toggle,
+.mheader label{
+    display: none;
+    cursor: pointer;
+}
+
+
+
+@media (width< 1024px){
+   
+
+    .mheader label{
+
+        display: initial;
+    }
+
+    .mheader{
+        padding: 20px 10%;
+    }
+
+    .mheader .navigation{
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: azure;
+        display: none;
+    }
+
+    .mheader .navigation ul li{
+        width: 100%;
+    }
+
+    
+    .mheader .navigation ul li a{
+        padding: 8px 30px 8px 10px;
+    }
+
+
+    .mheader .navigation ul li ul{
+       position: relative;
+       width: 100%;
+       left: 0;
+    }
+
+    .mheader .navigation ul li ul li{
+        background-color: blanchedalmond;
+    }
+
+    #toggle:checked ~ .navigation{
+        display: block;
+    }
+
+
+
+
+}
